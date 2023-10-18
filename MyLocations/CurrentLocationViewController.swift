@@ -34,7 +34,13 @@ class CurrentLocationViewController: UIViewController {
             showLocationServicesDeniedAlert()
             return
         }
-        startLocationManager()
+        if updatingLocation {
+            stopLocationManager()
+        } else {
+            location = nil
+            lastLocationError = nil
+            startLocationManager()
+        }
         updateLabels()
     }
     
@@ -50,6 +56,14 @@ class CurrentLocationViewController: UIViewController {
         alert.addAction(okAction)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func configureGetButton() {
+        if updatingLocation {
+            getButton.setTitle("Stop", for: .normal)
+        } else {
+            getButton.setTitle("Get My Location", for: .normal)
+        }
     }
     
     func updateLabels() {
@@ -81,6 +95,7 @@ class CurrentLocationViewController: UIViewController {
             }
             messageLabel.text = statusMessage
         }
+        configureGetButton()
     }
     
     func stopLocationManager() {
