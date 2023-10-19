@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E69FFAB02AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFAAF2AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift */; };
 		E6F361832AE035CC003C832A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F361822AE035CC003C832A /* AppDelegate.swift */; };
 		E6F361852AE035CC003C832A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F361842AE035CC003C832A /* SceneDelegate.swift */; };
 		E6F361872AE035CC003C832A /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F361862AE035CC003C832A /* CurrentLocationViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E69FFAAF2AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsTableViewController.swift; sourceTree = "<group>"; };
 		E6F3617F2AE035CC003C832A /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F361822AE035CC003C832A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6F361842AE035CC003C832A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E6F3618B2AE035CF003C832A /* Assets.xcassets */,
 				E6F3618D2AE035CF003C832A /* LaunchScreen.storyboard */,
 				E6F361902AE035CF003C832A /* Info.plist */,
+				E69FFAAF2AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6F361872AE035CC003C832A /* CurrentLocationViewController.swift in Sources */,
+				E69FFAB02AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift in Sources */,
 				E6F361832AE035CC003C832A /* AppDelegate.swift in Sources */,
 				E6F361852AE035CC003C832A /* SceneDelegate.swift in Sources */,
 			);
