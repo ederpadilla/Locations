@@ -23,4 +23,9 @@ class LocationDetailsViewController: UITableViewController {
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      navigationController?.isNavigationBarHidden = true
+    }
 }
