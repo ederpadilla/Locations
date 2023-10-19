@@ -8,6 +8,7 @@
 import UIKit
 
 class LocationDetailsViewController: UITableViewController {
+    
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var latitudeLabel: UILabel!
@@ -27,5 +28,10 @@ class LocationDetailsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      navigationController?.isNavigationBarHidden = false
     }
 }
