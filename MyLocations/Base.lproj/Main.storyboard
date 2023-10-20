@@ -403,7 +403,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZCe-6M-KU1" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="8gP-JM-PIC"/>
+                                    <segue destination="ZCe-6M-KU1" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="7xQ-Ph-mpo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
