@@ -67,7 +67,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
                                 <connections>
-                                    <segue destination="2wz-vE-JJr" kind="show" identifier="Tag Location" id="uUb-w9-qlp"/>
+                                    <segue destination="2wz-vE-JJr" kind="show" identifier="TagLocation" id="uUb-w9-qlp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-B0-DM5">
