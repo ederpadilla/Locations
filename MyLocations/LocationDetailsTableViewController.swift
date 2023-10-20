@@ -16,11 +16,6 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
-    override func viewWillDisappear(_ animated: Bool) {
-      super.viewWillDisappear(animated)
-      navigationController?.isNavigationBarHidden = false
-    }
-    
     // MARK: - Actions
     @IBAction func done() {
         navigationController?.popViewController(animated: true)

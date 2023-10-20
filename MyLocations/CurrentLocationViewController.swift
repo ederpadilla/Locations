@@ -37,6 +37,11 @@ class CurrentLocationViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     @IBAction func getLocation() {
         let authStatus = locationManager.authorizationStatus
         if authStatus == .denied || authStatus == .restricted {
