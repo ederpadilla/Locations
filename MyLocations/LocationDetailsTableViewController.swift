@@ -25,6 +25,7 @@ class LocationDetailsViewController: UITableViewController {
         formatter.timeStyle = .short
         return formatter
     }()
+    var categoryName = "No Category"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ class LocationDetailsViewController: UITableViewController {
         } else {
             addressLabel.text = "No Address Found"
         }
-        
+        categoryLabel.text = categoryName
         dateLabel.text = format(date: Date())
     }
     
