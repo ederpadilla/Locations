@@ -42,6 +42,14 @@ class CurrentLocationViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TagLocation" {
+            let controller = segue.destination as! LocationDetailsViewController
+            controller.coordinate = location!.coordinate
+            controller.placemark = placemark
+        }
+    }
+    
     @IBAction func getLocation() {
         let authStatus = locationManager.authorizationStatus
         if authStatus == .denied || authStatus == .restricted {
