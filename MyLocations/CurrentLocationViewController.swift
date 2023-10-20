@@ -32,6 +32,11 @@ class CurrentLocationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func getLocation() {
         let authStatus = locationManager.authorizationStatus
         if authStatus == .denied || authStatus == .restricted {

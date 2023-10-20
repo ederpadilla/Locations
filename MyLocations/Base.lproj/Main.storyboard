@@ -67,7 +67,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Tag Location"/>
                                 <connections>
-                                    <segue destination="2wz-vE-JJr" kind="show" id="rKI-uE-HiN"/>
+                                    <segue destination="2wz-vE-JJr" kind="show" id="uUb-w9-qlp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-B0-DM5">
@@ -212,6 +212,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7tX-GB-bHa" firstAttribute="leading" secondItem="P8J-UR-6A0" secondAttribute="leadingMargin" id="BbA-aY-Jj3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7tX-GB-bHa" secondAttribute="trailing" constant="20" symbolic="YES" id="bxN-Wy-GZU"/>
                                                 <constraint firstItem="7tX-GB-bHa" firstAttribute="centerY" secondItem="P8J-UR-6A0" secondAttribute="centerY" id="cyc-sn-lm5"/>
                                             </constraints>
                                         </tableViewCellContentView>

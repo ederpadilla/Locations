@@ -16,6 +16,11 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    override func viewWillDisappear(_ animated: Bool) {
+      super.viewWillDisappear(animated)
+      navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - Actions
     @IBAction func done() {
         navigationController?.popViewController(animated: true)
@@ -23,15 +28,5 @@ class LocationDetailsViewController: UITableViewController {
     
     @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-      super.viewWillDisappear(animated)
-      navigationController?.isNavigationBarHidden = false
     }
 }
