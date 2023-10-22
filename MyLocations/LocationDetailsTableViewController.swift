@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class LocationDetailsViewController: UITableViewController {
     
@@ -16,6 +17,7 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    var managedObjectContext: NSManagedObjectContext!
     var coordinate = CLLocationCoordinate2D(latitude: 0,
                                             longitude: 0)
     var placemark: CLPlacemark?
@@ -26,6 +28,7 @@ class LocationDetailsViewController: UITableViewController {
         return formatter
     }()
     var categoryName = "No Category"
+    var date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +47,7 @@ class LocationDetailsViewController: UITableViewController {
             addressLabel.text = "No Address Found"
         }
         categoryLabel.text = categoryName
-        dateLabel.text = format(date: Date())
+        dateLabel.text = format(date: date)
         
         // Hide keyboard
         let gestureRecognizer = UITapGestureRecognizer(target: self,
@@ -101,10 +104,24 @@ class LocationDetailsViewController: UITableViewController {
         else { return }
         let hudView = HudView.hud(inView: mainView, animated: true)
         hudView.text = "Tagged"
-        let delayInSeconds = 0.6
-        afterDelay(0.6) {
-            hudView.hide()
-            self.navigationController?.popViewController(animated: true)
+        
+        let location = LocationEntity(context: managedObjectContext)
+        
+        location.locationDescription = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        do {
+            try managedObjectContext.save()
+            afterDelay(0.6) {
+                hudView.hide()
+                self.navigationController?.popViewController(
+                    animated: true)
+            }
+        } catch {
+            fatalError("Error: \(error)")
         }
     }
     
