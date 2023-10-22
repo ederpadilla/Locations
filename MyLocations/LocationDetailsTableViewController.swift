@@ -121,7 +121,7 @@ class LocationDetailsViewController: UITableViewController {
                     animated: true)
             }
         } catch {
-            fatalError("Error: \(error)")
+            fatalCoreDataError(error)
         }
     }
     
