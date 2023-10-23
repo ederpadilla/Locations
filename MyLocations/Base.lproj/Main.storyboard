@@ -128,6 +128,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WcF-ZE-XW0" kind="relationship" relationship="viewControllers" id="fVo-pJ-XG4"/>
+                        <segue destination="IlU-u6-1lb" kind="relationship" relationship="viewControllers" id="msp-dI-rg5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO8-3G-KYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -418,6 +419,79 @@
                 <exit id="ZCe-6M-KU1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3517" y="4"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="lLg-4U-Ook">
+            <objects>
+                <tableViewController id="k93-mw-Ak6" customClass="LocationsViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5T5-3X-tD0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="s7w-NI-Wgc" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s7w-NI-Wgc" id="szp-RC-8tx">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oio-Vc-taU">
+                                            <rect key="frame" x="20" y="11" width="353" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hy-tV-gQb">
+                                            <rect key="frame" x="20" y="37" width="353" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="leading" secondItem="szp-RC-8tx" secondAttribute="leadingMargin" id="ARW-yG-qKs"/>
+                                        <constraint firstItem="oio-Vc-taU" firstAttribute="leading" secondItem="szp-RC-8tx" secondAttribute="leadingMargin" id="DYA-BL-KdV"/>
+                                        <constraint firstItem="oio-Vc-taU" firstAttribute="trailing" secondItem="szp-RC-8tx" secondAttribute="trailingMargin" id="Eij-jO-O6F"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="0Hy-tV-gQb" secondAttribute="bottom" id="Slp-7h-LPB"/>
+                                        <constraint firstItem="oio-Vc-taU" firstAttribute="top" secondItem="szp-RC-8tx" secondAttribute="topMargin" id="T55-SZ-QIE"/>
+                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="trailing" secondItem="szp-RC-8tx" secondAttribute="trailingMargin" id="ajm-XL-DHp"/>
+                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="top" secondItem="oio-Vc-taU" secondAttribute="bottom" constant="5" id="lBQ-Yr-Bos"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="0Hy-tV-gQb" id="i3B-ZQ-cge"/>
+                                    <outlet property="descriptionLabel" destination="oio-Vc-taU" id="UPS-tR-2Y0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k93-mw-Ak6" id="Ny6-u2-LvL"/>
+                            <outlet property="delegate" destination="k93-mw-Ak6" id="TWh-TF-e80"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Locations" id="Ogz-XM-dRv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btl-HL-mNr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="746"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="LR9-IC-MxG">
+            <objects>
+                <navigationController id="IlU-u6-1lb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Locations" id="x2S-Sv-oCX"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LC5-8a-OaZ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k93-mw-Ak6" kind="relationship" relationship="rootViewController" id="eIj-BW-Wut"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbf-P1-XY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="747"/>
         </scene>
     </scenes>
     <resources>
