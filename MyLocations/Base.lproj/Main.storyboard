@@ -479,10 +479,10 @@
             </objects>
             <point key="canvasLocation" x="1990" y="735"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="60y-Bk-n6e">
             <objects>
-                <viewController id="EN5-fu-ner" sceneMemberID="viewController">
+                <viewController id="EN5-fu-ner" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q1g-01-dkJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
