@@ -12,8 +12,13 @@ import CoreData
 class MapViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
-    
     var managedObjectContext: NSManagedObjectContext!
+    var locations = [LocationEntity]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateLocations()
+    }
     
     // MARK: - Actions
     @IBAction func showUser() {
@@ -27,6 +32,18 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func showLocations() {
+    }
+    
+    func updateLocations() {
+        mapView.removeAnnotations(locations)
+        
+        let entity = LocationEntity.entity()
+        
+        let fetchRequest = NSFetchRequest<Location>()
+        fetchRequest.entity = entity
+        
+        locations = try! managedObjectContext.fetch(fetchRequest)
+        mapView.addAnnotations(locations)
     }
 }
 
