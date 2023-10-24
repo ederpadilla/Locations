@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -116,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="1990.0763358778624" y="3.5211267605633805"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Map-->
         <scene sceneID="fCu-9N-7Le">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qba-wa-CHs" sceneMemberID="viewController">
+                <tabBarController title="Map" automaticallyAdjustsScrollViewInsets="NO" id="qba-wa-CHs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4OL-CP-gyp">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -129,6 +130,7 @@
                     <connections>
                         <segue destination="WcF-ZE-XW0" kind="relationship" relationship="viewControllers" id="fVo-pJ-XG4"/>
                         <segue destination="IlU-u6-1lb" kind="relationship" relationship="viewControllers" id="msp-dI-rg5"/>
+                        <segue destination="kzq-Vu-SWp" kind="relationship" relationship="viewControllers" id="rKD-Oa-ReH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO8-3G-KYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,7 +203,7 @@
                             <tableViewSection id="lLR-b9-h58">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="NfF-pC-YBu">
-                                        <rect key="frame" x="0.0" y="222.9999980926514" width="393" height="43.666667938232393"/>
+                                        <rect key="frame" x="0.0" y="222.99999809265137" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfF-pC-YBu" id="P8J-UR-6A0">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
@@ -477,6 +479,34 @@
             </objects>
             <point key="canvasLocation" x="1990" y="735"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="60y-Bk-n6e">
+            <objects>
+                <viewController id="EN5-fu-ner" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q1g-01-dkJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKD-IJ-xmR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4sN-b7-SBv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kKD-IJ-xmR" firstAttribute="top" secondItem="4sN-b7-SBv" secondAttribute="top" id="3GM-Ld-VFe"/>
+                            <constraint firstItem="kKD-IJ-xmR" firstAttribute="leading" secondItem="4sN-b7-SBv" secondAttribute="leading" id="7JA-Ic-Vo9"/>
+                            <constraint firstItem="4sN-b7-SBv" firstAttribute="trailing" secondItem="kKD-IJ-xmR" secondAttribute="trailing" id="mUY-A3-b88"/>
+                            <constraint firstItem="4sN-b7-SBv" firstAttribute="bottom" secondItem="kKD-IJ-xmR" secondAttribute="bottom" id="vXp-ue-W0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tWy-VC-V07"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-TX-X6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988.5496183206105" y="-739.43661971830988"/>
+        </scene>
         <!--Locations-->
         <scene sceneID="LR9-IC-MxG">
             <objects>
@@ -493,6 +523,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbf-P1-XY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="746"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="8KM-ss-dP4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kzq-Vu-SWp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="YSX-qA-dsq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DCr-5U-pzc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EN5-fu-ner" kind="relationship" relationship="rootViewController" id="LV9-8q-8km"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAf-HP-nqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="-739.43661971830988"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
