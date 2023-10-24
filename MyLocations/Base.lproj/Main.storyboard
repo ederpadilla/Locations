@@ -501,7 +501,10 @@
                             <constraint firstItem="4sN-b7-SBv" firstAttribute="bottom" secondItem="kKD-IJ-xmR" secondAttribute="bottom" id="vXp-ue-W0r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tWy-VC-V07"/>
+                    <navigationItem key="navigationItem" id="tWy-VC-V07">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="APL-pU-xQB"/>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="4lz-s1-g9V"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-TX-X6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -527,7 +530,7 @@
         <!--Map-->
         <scene sceneID="8KM-ss-dP4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kzq-Vu-SWp" sceneMemberID="viewController">
+                <navigationController title="Map" automaticallyAdjustsScrollViewInsets="NO" id="kzq-Vu-SWp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" id="YSX-qA-dsq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DCr-5U-pzc">
