@@ -120,9 +120,15 @@ class LocationDetailsViewController: UITableViewController {
         guard let mainView = navigationController?.parent?.view
         else { return }
         let hudView = HudView.hud(inView: mainView, animated: true)
-        hudView.text = "Tagged"
         
-        let location = LocationEntity(context: managedObjectContext)
+        let location: LocationEntity
+        if let temp = locationToEdit {
+            hudView.text = "Updated"
+            location = temp
+        } else {
+            hudView.text = "Tagged"
+            location = LocationEntity(context: managedObjectContext)
+        }
         
         location.locationDescription = descriptionTextView.text
         location.category = categoryName
