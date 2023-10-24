@@ -490,6 +490,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKD-IJ-xmR">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EN5-fu-ner" id="5ks-ep-OfV"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4sN-b7-SBv"/>
@@ -502,9 +505,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tWy-VC-V07">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="APL-pU-xQB"/>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="4lz-s1-g9V"/>
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="APL-pU-xQB">
+                            <connections>
+                                <action selector="showLocations" destination="EN5-fu-ner" id="VYG-Y6-BHq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="4lz-s1-g9V">
+                            <connections>
+                                <action selector="showUser" destination="EN5-fu-ner" id="yYQ-oh-pVW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="kKD-IJ-xmR" id="kVT-GJ-QYc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xY-TX-X6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
