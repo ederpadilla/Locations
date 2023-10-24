@@ -12,8 +12,20 @@ import CoreData
 class MapViewController: UIViewController {
     
     @IBOutlet var mapView: MKMapView!
-    var managedObjectContext: NSManagedObjectContext!
     var locations = [LocationEntity]()
+    var managedObjectContext: NSManagedObjectContext! {
+        didSet {
+            NotificationCenter.default.addObserver(
+                forName: Notification.Name.NSManagedObjectContextObjectsDidChange,
+                object: managedObjectContext,
+                queue: OperationQueue.main
+            ) { _ in
+                if self.isViewLoaded {
+                    self.updateLocations()
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
