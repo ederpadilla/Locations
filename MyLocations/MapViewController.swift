@@ -39,7 +39,7 @@ class MapViewController: UIViewController {
         
         let entity = LocationEntity.entity()
         
-        let fetchRequest = NSFetchRequest<Location>()
+        let fetchRequest = NSFetchRequest<LocationEntity>()
         fetchRequest.entity = entity
         
         locations = try! managedObjectContext.fetch(fetchRequest)
