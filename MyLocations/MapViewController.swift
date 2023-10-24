@@ -108,10 +108,8 @@ class MapViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    override func prepare(
-        for segue: UIStoryboardSegue,
-        sender: Any?
-    ) {
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
         if segue.identifier == "EditLocation" {
             let controller = segue.destination as! LocationDetailsViewController
             controller.managedObjectContext = managedObjectContext
