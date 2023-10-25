@@ -99,9 +99,9 @@ class LocationsViewController: UITableViewController {
                             commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let location = fetchedResultsController.object(
-                at: indexPath)
+            let location = fetchedResultsController.object(at: indexPath)
             managedObjectContext.delete(location)
+            location.removePhotoFile()
             do {
                 try managedObjectContext.save()
             } catch {
