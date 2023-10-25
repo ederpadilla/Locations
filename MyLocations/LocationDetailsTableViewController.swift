@@ -47,6 +47,7 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     var descriptionText = ""
+    var observer: Any!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +79,13 @@ class LocationDetailsViewController: UITableViewController {
         tableView.addGestureRecognizer(gestureRecognizer)
     }
     
+    deinit {
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer!)
+    }
+    
     func listenForBackgroundNotification() {
+        observer =
         NotificationCenter.default.addObserver(forName: UIScene.didEnterBackgroundNotification,
                                                object: nil,
                                                queue: OperationQueue.main) { _ in
