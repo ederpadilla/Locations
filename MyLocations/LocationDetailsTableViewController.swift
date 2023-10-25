@@ -50,6 +50,7 @@ class LocationDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listenForBackgroundNotification()
         if let location = locationToEdit {
             title = "Edit Location"
           }
@@ -75,6 +76,17 @@ class LocationDetailsViewController: UITableViewController {
                                                        action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func listenForBackgroundNotification() {
+        NotificationCenter.default.addObserver(forName: UIScene.didEnterBackgroundNotification,
+                                               object: nil,
+                                               queue: OperationQueue.main) { _ in
+            if self.presentedViewController != nil {
+                self.dismiss(animated: false, completion: nil)
+            }
+            self.descriptionTextView.resignFirstResponder()
+        }
     }
     
     @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
