@@ -205,13 +205,15 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
         alert.addAction(actCancel)
         
         let actPhoto = UIAlertAction(title: "Take Photo",
-                                     style: .default,
-                                     handler: nil)
+                                     style: .default) { _ in
+            self.takePhotoWithCamera()
+        }
         alert.addAction(actPhoto)
         
         let actLibrary = UIAlertAction(title: "Choose From Library",
-                                       style: .default,
-                                       handler: nil)
+                                       style: .default) { _ in
+            self.choosePhotoFromLibrary()
+        }
         alert.addAction(actLibrary)
         
         present(alert, animated: true, completion: nil)
@@ -220,7 +222,7 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate,
     // MARK: - Image Helper Methods
     func takePhotoWithCamera() {
         let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = .camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
