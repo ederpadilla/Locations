@@ -29,6 +29,7 @@ class LocationDetailsViewController: UITableViewController {
         formatter.timeStyle = .short
         return formatter
     }()
+    var image: UIImage?
     var categoryName = "No Category"
     var date = Date()
     var locationToEdit: LocationEntity? {
@@ -84,6 +85,12 @@ class LocationDetailsViewController: UITableViewController {
             return
         }
         descriptionTextView.resignFirstResponder()
+    }
+    
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        addPhotoLabel.text = ""
     }
     
     // MARK: - Table View Delegates
