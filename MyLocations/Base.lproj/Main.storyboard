@@ -364,6 +364,7 @@
                         <outlet property="categoryLabel" destination="asa-1a-OUn" id="iSQ-8D-9ag"/>
                         <outlet property="dateLabel" destination="i4M-LI-ipg" id="7Bj-lS-S0O"/>
                         <outlet property="descriptionTextView" destination="Qvs-YH-vQa" id="eQZ-wl-DYv"/>
+                        <outlet property="imageHeight" destination="Wxf-3M-15x" id="Plc-EN-blh"/>
                         <outlet property="imageView" destination="NcS-xN-Z7z" id="zNf-gO-xhV"/>
                         <outlet property="latitudeLabel" destination="Hko-ZS-iJG" id="Pya-Ru-W13"/>
                         <outlet property="longitudeLabel" destination="4aT-gZ-xAL" id="IYB-NL-xBd"/>
