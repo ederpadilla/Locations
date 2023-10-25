@@ -54,7 +54,12 @@ class LocationDetailsViewController: UITableViewController {
         listenForBackgroundNotification()
         if let location = locationToEdit {
             title = "Edit Location"
-          }
+            if location.hasPhoto {
+                if let theImage = location.photoImage {
+                    show(image: theImage)
+                }
+            }
+        }
         descriptionTextView.text = descriptionText
         categoryLabel.text = ""
         
@@ -164,6 +169,7 @@ class LocationDetailsViewController: UITableViewController {
         } else {
             hudView.text = "Tagged"
             location = LocationEntity(context: managedObjectContext)
+            location.photoID = nil
         }
         
         location.locationDescription = descriptionTextView.text
@@ -181,6 +187,19 @@ class LocationDetailsViewController: UITableViewController {
             }
         } catch {
             fatalCoreDataError(error)
+        }
+        
+        if let image = image {
+            if !location.hasPhoto {
+                location.photoID = LocationEntity.nextPhotoID() as NSNumber
+            }
+            if let data = image.jpegData(compressionQuality: 0.5) {
+                do {
+                    try data.write(to: location.photoURL, options: .atomic)
+                } catch {
+                    print("Error writing file: \(error)")
+                }
+            }
         }
     }
     
