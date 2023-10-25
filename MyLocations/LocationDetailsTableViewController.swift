@@ -17,6 +17,8 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var addPhotoLabel: UILabel!
     var managedObjectContext: NSManagedObjectContext!
     var coordinate = CLLocationCoordinate2D(latitude: 0,
                                             longitude: 0)
