@@ -203,7 +203,7 @@
                             <tableViewSection id="lLR-b9-h58">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="NfF-pC-YBu">
-                                        <rect key="frame" x="0.0" y="222.9999980926514" width="393" height="44.33333206176755"/>
+                                        <rect key="frame" x="0.0" y="222.99999809265137" width="393" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfF-pC-YBu" id="P8J-UR-6A0">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44.333332061767578"/>
@@ -487,6 +487,7 @@
                                 <connections>
                                     <outlet property="addressLabel" destination="0Hy-tV-gQb" id="i3B-ZQ-cge"/>
                                     <outlet property="descriptionLabel" destination="oio-Vc-taU" id="UPS-tR-2Y0"/>
+                                    <outlet property="photoImageView" destination="KKj-h8-ZI3" id="NZY-Se-U8z"/>
                                     <segue destination="2wz-vE-JJr" kind="show" identifier="EditLocation" id="cog-jw-XCw"/>
                                 </connections>
                             </tableViewCell>
