@@ -203,7 +203,7 @@
                             <tableViewSection id="lLR-b9-h58">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="NfF-pC-YBu">
-                                        <rect key="frame" x="0.0" y="222.9999980926514" width="393" height="44.33333206176755"/>
+                                        <rect key="frame" x="0.0" y="222.99999809265137" width="393" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfF-pC-YBu" id="P8J-UR-6A0">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44.333332061767578"/>
@@ -444,49 +444,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="s7w-NI-Wgc" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="65"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="90" id="s7w-NI-Wgc" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s7w-NI-Wgc" id="szp-RC-8tx">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="65"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oio-Vc-taU">
-                                            <rect key="frame" x="84" y="11" width="289" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-gl-FHF">
+                                            <rect key="frame" x="84" y="34.666666666666664" width="273" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hy-tV-gQb">
-                                            <rect key="frame" x="84" y="37" width="289" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="0.60220377334695774" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" red="0.95246853479434312" green="1" blue="0.96117296255874651" alpha="0.60220377334695774" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKj-h8-ZI3">
-                                            <rect key="frame" x="16" y="0.0" width="52" height="65"/>
+                                            <rect key="frame" x="16" y="0.0" width="52" height="90"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="52" id="LKk-Ou-epU"/>
                                                 <constraint firstAttribute="height" constant="52" id="p25-yf-7bH"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-68-dao">
+                                            <rect key="frame" x="84" y="54.666666666666664" width="273" height="16.999999999999993"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="leading" secondItem="KKj-h8-ZI3" secondAttribute="trailing" constant="16" id="988-db-wdp"/>
-                                        <constraint firstItem="oio-Vc-taU" firstAttribute="trailing" secondItem="szp-RC-8tx" secondAttribute="trailingMargin" id="Eij-jO-O6F"/>
+                                        <constraint firstItem="Tlg-68-dao" firstAttribute="bottom" secondItem="I7L-gl-FHF" secondAttribute="bottom" constant="16" id="2bv-2p-wNw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="I7L-gl-FHF" secondAttribute="trailing" constant="16" id="7FT-yq-csB"/>
+                                        <constraint firstItem="Tlg-68-dao" firstAttribute="leading" secondItem="KKj-h8-ZI3" secondAttribute="trailing" constant="16" id="PxL-hb-SZr"/>
                                         <constraint firstItem="KKj-h8-ZI3" firstAttribute="top" secondItem="szp-RC-8tx" secondAttribute="top" id="QiE-Tb-alf"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="0Hy-tV-gQb" secondAttribute="bottom" id="Slp-7h-LPB"/>
-                                        <constraint firstItem="oio-Vc-taU" firstAttribute="top" secondItem="szp-RC-8tx" secondAttribute="topMargin" id="T55-SZ-QIE"/>
                                         <constraint firstAttribute="bottom" secondItem="KKj-h8-ZI3" secondAttribute="bottom" id="VL5-hR-1xL"/>
                                         <constraint firstItem="KKj-h8-ZI3" firstAttribute="leading" secondItem="szp-RC-8tx" secondAttribute="leading" constant="16" id="XrD-G6-mhX"/>
-                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="trailing" secondItem="szp-RC-8tx" secondAttribute="trailingMargin" id="ajm-XL-DHp"/>
-                                        <constraint firstItem="0Hy-tV-gQb" firstAttribute="top" secondItem="oio-Vc-taU" secondAttribute="bottom" constant="5" id="lBQ-Yr-Bos"/>
-                                        <constraint firstItem="oio-Vc-taU" firstAttribute="leading" secondItem="KKj-h8-ZI3" secondAttribute="trailing" constant="16" id="qiG-VZ-Dak"/>
+                                        <constraint firstItem="I7L-gl-FHF" firstAttribute="centerY" secondItem="KKj-h8-ZI3" secondAttribute="centerY" id="cz0-0p-Mz0"/>
+                                        <constraint firstItem="I7L-gl-FHF" firstAttribute="leading" secondItem="KKj-h8-ZI3" secondAttribute="trailing" constant="16" id="gJF-Um-47i"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Tlg-68-dao" secondAttribute="trailing" constant="16" id="jLB-AU-jaC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="addressLabel" destination="0Hy-tV-gQb" id="i3B-ZQ-cge"/>
-                                    <outlet property="descriptionLabel" destination="oio-Vc-taU" id="UPS-tR-2Y0"/>
+                                    <outlet property="addressLabel" destination="Tlg-68-dao" id="wzJ-fV-8ff"/>
+                                    <outlet property="descriptionLabel" destination="I7L-gl-FHF" id="6s4-2a-mrN"/>
                                     <outlet property="photoImageView" destination="KKj-h8-ZI3" id="NZY-Se-U8z"/>
                                     <segue destination="2wz-vE-JJr" kind="show" identifier="EditLocation" id="cog-jw-XCw"/>
                                 </connections>
