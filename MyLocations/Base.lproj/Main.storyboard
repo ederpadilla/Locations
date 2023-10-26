@@ -504,7 +504,7 @@
             </objects>
             <point key="canvasLocation" x="1990" y="735"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="60y-Bk-n6e">
             <objects>
                 <viewController id="EN5-fu-ner" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
@@ -529,13 +529,13 @@
                             <constraint firstItem="4sN-b7-SBv" firstAttribute="bottom" secondItem="kKD-IJ-xmR" secondAttribute="bottom" id="vXp-ue-W0r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tWy-VC-V07">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="APL-pU-xQB">
+                    <navigationItem key="navigationItem" title="Map" id="tWy-VC-V07">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="APL-pU-xQB">
                             <connections>
                                 <action selector="showLocations" destination="EN5-fu-ner" id="VYG-Y6-BHq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="4lz-s1-g9V">
+                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="4lz-s1-g9V">
                             <connections>
                                 <action selector="showUser" destination="EN5-fu-ner" id="yYQ-oh-pVW"/>
                             </connections>
@@ -588,12 +588,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uUb-w9-qlp"/>
+        <segue reference="RQ7-jY-t1o"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
         <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
