@@ -113,6 +113,8 @@ class CurrentLocationViewController: UIViewController {
             } else {
                 addressLabel.text = "No Address Found"
             }
+            latitudeTextLabel.isHidden = false
+            longitudeTextLabel.isHidden = false
         } else {
             latitudeLabel.text = ""
             longitudeLabel.text = ""
@@ -133,6 +135,8 @@ class CurrentLocationViewController: UIViewController {
                 statusMessage = "Tap 'Get My Location' to Start"
             }
             messageLabel.text = statusMessage
+            latitudeTextLabel.isHidden = true
+            longitudeTextLabel.isHidden = true
         }
         configureGetButton()
     }

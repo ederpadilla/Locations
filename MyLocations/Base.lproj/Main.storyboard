@@ -111,7 +111,7 @@
                         <outlet property="getButton" destination="8wC-B0-DM5" id="bli-bs-uTd"/>
                         <outlet property="latitudeLabel" destination="gtH-Na-n8t" id="gnZ-l1-EOf"/>
                         <outlet property="latitudeTextLabel" destination="Rwd-Kw-GGt" id="GPG-s6-n55"/>
-                        <outlet property="longitudeLabel" destination="97x-lB-cyx" id="J4R-Fo-Wdp"/>
+                        <outlet property="longitudeLabel" destination="qsC-fF-EFn" id="Bxb-lu-dgV"/>
                         <outlet property="longitudeTextLabel" destination="gtH-Na-n8t" id="6bP-gs-fVe"/>
                         <outlet property="messageLabel" destination="DC5-dh-t4z" id="sQ5-q0-Bri"/>
                         <outlet property="tagButton" destination="CaK-QI-jwa" id="UYR-hs-0cV"/>
@@ -207,7 +207,7 @@
                             <tableViewSection id="lLR-b9-h58">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="NfF-pC-YBu">
-                                        <rect key="frame" x="0.0" y="222.9999980926514" width="393" height="44.33333206176755"/>
+                                        <rect key="frame" x="0.0" y="222.99999809265137" width="393" height="44.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfF-pC-YBu" id="P8J-UR-6A0">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="44.333332061767578"/>
