@@ -57,6 +57,12 @@ class CurrentLocationViewController: UIViewController {
         }
     }
     
+    func hideLogoView() {
+        logoVisible = false
+        containerView.isHidden = false
+        logoButton.removeFromSuperview()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
@@ -82,6 +88,9 @@ class CurrentLocationViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
             showLocationServicesDeniedAlert()
             return
+        }
+        if logoVisible {
+            hideLogoView()
         }
         if updatingLocation {
             stopLocationManager()
