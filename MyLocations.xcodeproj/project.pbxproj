@@ -13,6 +13,7 @@
 		E67D3D8F2AE32677000B87F8 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D3D8E2AE32677000B87F8 /* HudView.swift */; };
 		E67D3D912AE32F0F000B87F8 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D3D902AE32F0F000B87F8 /* Functions.swift */; };
 		E692F8D52AE9F3B50054CA14 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692F8D42AE9F3B50054CA14 /* UIImage+Resize.swift */; };
+		E692F8D92AEA120F0054CA14 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = E692F8D82AEA120F0054CA14 /* Sound */; };
 		E69FFAB02AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69FFAAF2AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift */; };
 		E6A207E62AE487150049DF29 /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6A207E42AE487150049DF29 /* MyLocations.xcdatamodeld */; };
 		E6A207E92AE492AA0049DF29 /* LocationEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A207E72AE492AA0049DF29 /* LocationEntity+CoreDataClass.swift */; };
@@ -53,6 +54,7 @@
 		E67D3D8E2AE32677000B87F8 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		E67D3D902AE32F0F000B87F8 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E692F8D42AE9F3B50054CA14 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		E692F8D82AEA120F0054CA14 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		E69FFAAF2AE1DAA5005C85B7 /* LocationDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsTableViewController.swift; sourceTree = "<group>"; };
 		E6A207E52AE487150049DF29 /* MyLocations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLocations.xcdatamodel; sourceTree = "<group>"; };
 		E6A207E72AE492AA0049DF29 /* LocationEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		E6F361812AE035CC003C832A /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				E692F8D82AEA120F0054CA14 /* Sound */,
 				E6F361822AE035CC003C832A /* AppDelegate.swift */,
 				E6F361842AE035CC003C832A /* SceneDelegate.swift */,
 				E6F361862AE035CC003C832A /* CurrentLocationViewController.swift */,
@@ -266,6 +269,7 @@
 			files = (
 				E6F3618F2AE035CF003C832A /* LaunchScreen.storyboard in Resources */,
 				E6F3618C2AE035CF003C832A /* Assets.xcassets in Resources */,
+				E692F8D92AEA120F0054CA14 /* Sound in Resources */,
 				E6F3618A2AE035CC003C832A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
