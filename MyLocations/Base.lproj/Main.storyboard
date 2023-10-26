@@ -109,10 +109,10 @@
                     <connections>
                         <outlet property="addressLabel" destination="CwR-q4-u6K" id="gba-kY-KsB"/>
                         <outlet property="getButton" destination="8wC-B0-DM5" id="bli-bs-uTd"/>
-                        <outlet property="latitudeLabel" destination="gtH-Na-n8t" id="gnZ-l1-EOf"/>
-                        <outlet property="latitudeTextLabel" destination="Rwd-Kw-GGt" id="GPG-s6-n55"/>
-                        <outlet property="longitudeLabel" destination="qsC-fF-EFn" id="Bxb-lu-dgV"/>
-                        <outlet property="longitudeTextLabel" destination="gtH-Na-n8t" id="6bP-gs-fVe"/>
+                        <outlet property="latitudeLabel" destination="gtH-Na-n8t" id="KOG-rX-8Bd"/>
+                        <outlet property="latitudeTextLabel" destination="Rwd-Kw-GGt" id="V9i-MO-iRO"/>
+                        <outlet property="longitudeLabel" destination="97x-lB-cyx" id="YPt-mo-bbc"/>
+                        <outlet property="longitudeTextLabel" destination="qsC-fF-EFn" id="fuT-eZ-Ns3"/>
                         <outlet property="messageLabel" destination="DC5-dh-t4z" id="sQ5-q0-Bri"/>
                         <outlet property="tagButton" destination="CaK-QI-jwa" id="UYR-hs-0cV"/>
                     </connections>
