@@ -19,6 +19,7 @@ class CurrentLocationViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var containerView: UIView!
     let locationManager = CLLocationManager()
     var location: CLLocation?
     var updatingLocation = false
@@ -29,11 +30,31 @@ class CurrentLocationViewController: UIViewController {
     var lastGeocodingError: Error?
     var timer: Timer?
     var managedObjectContext: NSManagedObjectContext!
+    var logoVisible = false
+    lazy var logoButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(
+            UIImage(named: "Logo"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(
+            self, action: #selector(getLocation), for: .touchUpInside)
+        button.center.x = self.view.bounds.midX
+        button.center.y = 220
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
         // Do any additional setup after loading the view.
+    }
+    
+    func showLogoView() {
+        if !logoVisible {
+            logoVisible = true
+            containerView.isHidden = true
+            view.addSubview(logoButton)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,7 +153,8 @@ class CurrentLocationViewController: UIViewController {
             } else if updatingLocation {
                 statusMessage = "Searching..."
             } else {
-                statusMessage = "Tap 'Get My Location' to Start"
+                statusMessage = ""
+                showLogoView()
             }
             messageLabel.text = statusMessage
             latitudeTextLabel.isHidden = true

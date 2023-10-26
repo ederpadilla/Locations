@@ -115,6 +115,7 @@
                     <navigationItem key="navigationItem" id="wgB-84-2GB"/>
                     <connections>
                         <outlet property="addressLabel" destination="CwR-q4-u6K" id="gba-kY-KsB"/>
+                        <outlet property="containerView" destination="92n-CK-cdL" id="01C-mt-MpA"/>
                         <outlet property="getButton" destination="8wC-B0-DM5" id="bli-bs-uTd"/>
                         <outlet property="latitudeLabel" destination="gtH-Na-n8t" id="KOG-rX-8Bd"/>
                         <outlet property="latitudeTextLabel" destination="Rwd-Kw-GGt" id="V9i-MO-iRO"/>
